@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="header" class="card-header">
+        <h3 id="title" class="ada">To-do app</h3>
+    </div>
+    <ul class="list">
+        <li>option1</li>
+        <li>option2</li>
+        <li>option3</li>
+    </ul>
+
+    <script>
+        // DOM
+        let result;
+
+        result = document.getElementById("title");
+        result = document.getElementById("title").id;
+        result = document.getElementById("title").className;
+        result = document.getElementById("title").classList;
+        // style
+        result = document.getElementById("title").style.fontSize = "26px";
+        result = document.getElementById("title").style.color = "blue"
+        // inner
+        result = document.getElementById("title").innerText = "To-do application"
+        result = document.getElementById("title").innerHTML = "<a>To-do application</a>"
+
+        // queryselector
+        result = document.querySelector("li")
+        result = document.querySelector("li:first-child");
+        result = document.querySelector("li:last-child");
+        result = document.querySelector("li:nth-child(2)");
+        // class id
+        result = document.querySelector(".list")
+        result = document.querySelector("#header")
+
+        result = document.getElementsByClassName("ada")
+
+        console.log(result);
+    </script>
+</body>
+
+</html>

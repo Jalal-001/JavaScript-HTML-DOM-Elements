@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="header" class="card-header">
+        <h3 id="title" class="ada">To-do app</h3>
+    </div>
+    <ul class="task-list">
+        <li class="task">option1</li>
+        <li class="task">option2</li>
+        <li class="task">option3</li>
+    </ul>
+
+    <ul id="task-list2">
+        <li class="task2">oop1</li>
+        <li class="task2">oop2</li>
+        <li class="task2">oop3</li>
+    </ul>
+
+    <script>
+        // DOM
+        let result;
+
+        result = document.getElementsByClassName("task")[1]
+        result = document.getElementsByClassName("task2")[2]
+
+        // loops
+
+        tasklist = document.getElementsByClassName("task");
+        for (let i = 0; i < tasklist.length; i++) {
+            console.log(tasklist[i]);
+        }
+        console.log(tasklist);
+
+        for (let i of tasklist) {
+            // console.log(i);
+            i.style.color = "orange";
+            i.style.fontSize = "25px";
+        }
+
+        // tagname
+        result = document.getElementsByTagName("li");
+        // queryselector
+        result = document.querySelectorAll(".task-list li");
+        result = document.querySelectorAll("#task-list2");
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
