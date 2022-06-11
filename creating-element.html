@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col12 mt-2">
+                <div class="card">
+                    <div class="card-header">To-do app</div>
+                </div>
+                <div class="card mt-3">
+                    <ul id="task-list" class="list-group list-group-flush">
+                        <!-- <li class="task list-group-item">
+                            <div class="form-check">
+                                <input type="checkbox" id="1" class="form-check-input">
+                                <label for="1" class="form-check-label">Example 1</label>
+                            </div>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // DOM
+        "use strict";
+        let ul = document.getElementById("task-list");
+        let count = ul.children.length;
+        //------------------ Count---------------------
+
+        // for (let i = 1; i <= 15; i++) {
+
+        //     let li = `<li class="task list-group-item">
+        //                     <div class="form-check">
+        //                         <input type="checkbox" id="${i}" class="form-check-input">
+        //                         <label for="${i}" class="form-check-label">Example ${i}</label>
+        //                     </div>
+        //                 </li>`;
+        //     ul.insertAdjacentHTML("beforeend", li);
+        // }
+
+        //------------------ Array---------------------
+
+        // let example = ["Example 1", "Example 2", "Example 3", "Example 4"];
+        // for (let m in example) {
+        //     let li = `<li class="task list-group-item">
+        //                     <div class="form-check">
+        //                          <input type="checkbox" id="${m + 1}" class="form-check-input">
+        //                          <label for="${m + 1}" class="form-check-label"> ${example[m]}</label>
+        //                      </div>
+        //               </li>`;
+        //     ul.insertAdjacentHTML("beforeend", li);
+        // }
+
+        //------------------ Objects---------------------
+
+        let examples = [
+            { "id": 1, "name": "Example 1" },
+            { "id": 2, "name": "Example 2" },
+            { "id": 3, "name": "Example 3" },
+            { "id": 4, "name": "Example 4" },
+        ];
+        for (let objects of examples) {
+            let li = `<li class="task list-group-item">
+                            <div class="form-check">
+                                 <input type="checkbox" id="${objects.id}" class="form-check-input">
+                                 <label for="${objects.id}" class="form-check-label"> ${objects.name}</label>
+                             </div>
+                      </li>`;
+            ul.insertAdjacentHTML("beforeend", li);
+        };
+
+    </script>
+</body>
+
+</html>
